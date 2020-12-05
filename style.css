@@ -1,0 +1,382 @@
+body {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+.container {
+ margin: 0 auto;
+ max-width: 1100px;
+ width: 100%;
+}
+
+
+/* Headers */
+
+.title {
+
+}
+
+.title__inner {
+	padding-top: 111px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 40px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.title__bar {
+	content: "";
+	display: block;
+	width: 87px;
+	height: 4px;
+	margin: 14px auto;
+
+	background: black;
+	opacity: 15%;
+}
+
+.title__subtitle {
+	margin: 14px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+}
+
+
+
+/* Welcome */
+
+
+.welcome {
+	width: 100%;
+	height: 596px;
+	background: #87509c;
+}
+
+header {
+	padding: 56px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.header__logo {
+ margin-left: 42px;
+}
+
+.header__nav {
+	margin-right: 58px;
+}
+
+.nav__item {
+	padding: 4px 15px;
+	border-radius: 4px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	transition: background .3s ease;
+}
+
+.nav__item:hover {
+	background: #643a79;
+}
+
+.nav__item.active {
+	background: #643a79;
+}
+
+.welcome__main {
+	padding-top: 78px;
+	text-align: center;
+	font-size: 42px;
+	color: white;
+}
+
+.button {
+	width: 292px;
+	height: 66px;
+	border-radius: 3px;
+	display: block;
+	border: none;
+	outline: none;
+
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+}
+
+.welcome__button {
+	margin: 55px auto;
+	background: #eb7d4b;
+	box-shadow: 2px 2px #c86a40;
+}
+
+.button:active {
+	box-shadow: none;
+	transform: translate(2px,2px);
+}
+
+
+/* Servises	*/
+
+
+.servises {
+	width: 100%;
+	height: 747px;
+	background: #17c2a4;
+	color: white;
+}
+
+.serv__card {
+	margin-top: 81px;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.serv__card__item {
+	flex-basis: 25%;
+	align-self: flex-start;
+}
+
+.serv__card__item__icon {
+}
+
+.serv__card__item__icon	img {
+	max-width: 160px;
+	max-height: 130px;
+}
+
+.serv__card__item__title {
+	margin-top: 47px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+.serv__card__item__subtitle {
+	padding: 0 40px;
+	line-height: 1.5;
+	font-weight: 300;
+}
+
+
+/* Team */
+
+
+.team {
+	width: 100%;
+	height: 913px;
+	background: #e7f1f8;
+	color: #3c4761;
+}
+
+.team__card {
+	margin-top: 81px;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.team__card__item {
+	flex-basis: 25%;
+}
+
+.team__card__item__foto {
+
+}
+
+.team__card__item__name {
+	margin-top: 33px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.team__card__item__position {
+	margin-top: 8px;
+	font-weight: 400;
+	color: #79d0ee;
+}
+
+.team__card__item__about {
+	margin-top: 20px;
+	padding: 0 20px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+.team__card__item__icons {
+	margin-top: 10px;
+	display: inline-flex;
+}
+
+.team__card__item__icons__item {
+	margin: 0 5px;
+	width: 33px;
+	height: 33px;
+
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
+	background-color: #bdd1df;
+	border-radius: 50%;
+	transition: background .3s ease;
+}
+
+.team__card__item__icons__item:hover {
+	background: #7fb9e2;
+}
+
+.socialfalse {
+	display: none;
+}
+
+
+/* We got skills */
+
+
+.wgs {
+	width: 100%;
+	height: 655px;
+	background: #fff;
+	color: #3c4761;
+}
+
+.wgs__card {
+	margin-top: 81px;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.wgs__card__item {
+	flex-basis: 25%;
+}
+
+.wgs__card__item__icon {
+	margin: auto;
+	width: 140px;
+	height: 160px;
+}
+
+.wgs__card__item__progress	progress {
+	height: 50px;
+}
+
+.wgs__card__item__title {
+	margin-top: 21px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+
+/* Our portfolio */
+
+
+.portfolio {
+	width: 100%;
+	height: 1423px;
+	background: #ffdd99;
+	color: #393939;
+	text-align: center;
+}
+
+.portfolio__nav {
+	margin: 42px auto 0;
+	width: 40%;
+	display: inline-flex;
+}
+
+.portfolio__nav__item {
+ margin: 0px 5px 5px;
+ padding: 10px 17px;
+ border-radius: 5px;
+ width: 50px;
+ 
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 400;
+	font-size: 18px;
+	color: #393939;
+	background: #ebc985;
+	transition: background .3s ease;
+}
+
+.portfolio__nav__item.active {
+	background: #fff;
+}
+
+.portfolio__nav__item:hover {
+	background: #fff;
+}
+
+.portfolio__card {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.portfolio__card__item {
+	margin-top: 58px;
+}
+
+.portfolio__card__item__picture {
+
+}
+
+.portfolio__card__item__title {
+	padding-top: 26px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.portfolio__button {
+	margin: 82px auto;
+	background: #17c2a4;
+	box-shadow: 2px 2px #14a58c;
+}
+
+
+/* About */
+
+.about {
+	width: 100%;
+	height: 894px;
+	background: #d74680;
+	color: #fff;
+}
+
+.about__card {
+
+}
+
+.about__card__item {
+
+}
+
+.about__card__item__picture {
+
+}
+
+.about__card__item__info {
+
+}
+
+.about__card__item__name {
+
+}
+
+.about__card__item__position {
+
+}
