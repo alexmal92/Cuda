@@ -1,5 +1,6 @@
 body {
 	font-family: 'Titillium Web', sans-serif;
+	min-width: 260px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,12 +17,12 @@ h1, h2, h3, h4, h5, h6 {
 /* Headers */
 
 .title {
-
+	padding-top: 111px;
+	text-align: center;
 }
 
 .title__inner {
-	padding-top: 111px;
-	text-align: center;
+	padding: 0 20px;
 	font-weight: 700;
 	font-size: 40px;
 	letter-spacing: 3px;
@@ -41,12 +42,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .title__subtitle {
 	margin: 14px;
+	padding: 0 20px;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.5;
-	text-align: center;
 }
 
+@media (max-width: 1024px) {
+	.title {
+	padding-top: 50px;
+	}
+}
+
+@media (max-width: 768px) {
+	.title__inner {
+		font-size: 30px;
+	}
+}
+@media (max-width: 425px) {
+	.title {
+		padding-top: 20px;
+	}
+	.title__inner {
+		font-size: 22px;
+	}
+}
 
 
 /* Welcome */
@@ -54,8 +74,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .welcome {
 	width: 100%;
-	height: 596px;
 	background: #87509c;
+	overflow: auto;
 }
 
 header {
@@ -63,11 +83,12 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
 }
 
-.header__logo {
- margin-left: 42px;
+.header__logo {	
+	min-width: 100px;
+	margin-left: 58px;
+	color: #fff;
 }
 
 .header__nav {
@@ -91,8 +112,19 @@ header {
 	background: #643a79;
 }
 
+.burger {
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+.burger img {
+	width: 40px;
+	color: #eb7d4b;	
+}
+
 .welcome__main {
-	padding-top: 78px;
+	padding: 78px 30px 0;
 	text-align: center;
 	font-size: 42px;
 	color: white;
@@ -124,15 +156,73 @@ header {
 	transform: translate(2px,2px);
 }
 
+@media (max-width: 1024px) {
+	.welcome__main {
+		padding-top: 25px;
+		font-size: 38px;
+	}
+}
+
+@media (max-width: 768px) {
+	header {
+		flex-direction: column;
+		padding-bottom: 25px;
+	}
+	.header__logo {
+		margin: 0;
+	}
+	.header__nav {
+		margin: 0;
+		padding-top: 35px;
+	}
+	.welcome__main {
+		font-size: 28px;
+		font-weight: 400;
+	}
+	.button {
+		width: 180px;
+		height: 40px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 425px) {
+	header {
+		padding: 20px 0;
+	}
+	.header__nav {
+		display: none;
+	}
+	.welcome__main {
+		padding-top: 0;
+		font-size: 18px;
+		font-weight: 400;
+	}
+	.welcome__button {
+		box-shadow: none;
+	}
+	.button {
+		margin: 20px auto;
+		width: 150px;
+		border-radius: 7px;
+	}
+	.button:active {
+		transform: none;
+	}
+	.burger {
+		display: block;
+	}
+}
+
 
 /* Servises	*/
 
 
 .servises {
 	width: 100%;
-	height: 747px;
 	background: #17c2a4;
 	color: white;
+	overflow: auto;
 }
 
 .serv__card {
@@ -143,8 +233,7 @@ header {
 }
 
 .serv__card__item {
-	flex-basis: 25%;
-	align-self: flex-start;
+	max-width: 350px;
 }
 
 .serv__card__item__icon {
@@ -168,15 +257,46 @@ header {
 	font-weight: 300;
 }
 
+@media (max-width: 1024px) {
+	.serv__card {
+		margin-top: 40px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.serv__card__item {
+		margin-top: 30px;
+	}
+	.serv__card__item__icon	img {
+		max-width: 120px;
+		max-height: 90px;
+	}
+	.serv__card__item__title {
+		margin-top: 15px;
+		font-weight: 400;
+		font-size: 20px;
+	}
+	.serv__card__item__subtitle {
+		padding: 0 25px;
+	}
+}
+
+@media (max-width: 768px) {
+	.serv__card {
+		margin: 0;
+	}
+	.serv__card__item {
+		margin-top: 15px;
+	}
+}
 
 /* Team */
 
 
 .team {
 	width: 100%;
-	height: 913px;
 	background: #e7f1f8;
 	color: #3c4761;
+	overflow: auto;
 }
 
 .team__card {
@@ -187,11 +307,10 @@ header {
 }
 
 .team__card__item {
-	flex-basis: 25%;
+	width: 350px;
 }
 
 .team__card__item__foto {
-
 }
 
 .team__card__item__name {
@@ -214,7 +333,7 @@ header {
 }
 
 .team__card__item__icons {
-	margin-top: 10px;
+	margin: 10px 0 30px;
 	display: inline-flex;
 }
 
@@ -240,26 +359,72 @@ header {
 	display: none;
 }
 
+@media (max-width: 1024px) {
+	.team__card {
+		margin-top: 40px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.team__card__item {
+		margin-top: 30px;
+	}
+	.team__card__item__name {
+		margin-top: 15px;
+		font-weight: 400;
+		font-size: 20px;
+	}
+	.team__card__item__about {
+		padding: 0 25px;
+	}
+}
+
+@media (max-width: 768px) {
+	.team__card {
+		margin: 0;
+	}
+	.team__card__item__foto img {
+		width: 150px;
+	}
+	.team__card__item__name {
+		margin-top: 15px;
+	}
+}
+
+@media (max-width: 425px) {
+	.team__card__item {
+		margin-top: 15px;
+	}
+	.team__card__item__foto img {
+		width: 100px;
+	}
+	.team__card__item__about {
+		margin-top: 0px;
+	}
+	.team__card__item__icons {
+		margin: 0 0 20px 0;
+	}
+}
+
 
 /* We got skills */
 
 
 .wgs {
 	width: 100%;
-	height: 655px;
 	background: #fff;
 	color: #3c4761;
+	overflow: auto;
 }
 
 .wgs__card {
-	margin-top: 81px;
+	margin: 81px 0 40px;
 	display: flex;
 	justify-content: space-around;
 	text-align: center;
 }
 
 .wgs__card__item {
-	flex-basis: 25%;
+	width: 350px;
 }
 
 .wgs__card__item__icon {
@@ -277,6 +442,47 @@ header {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+	.wgs__card {
+		margin-top: 0;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.wgs__card__item {
+		margin-top: 20px;
+	}
+	.wgs__card__item__progress {
+		margin-top: 15px;
+		font-weight: 400;
+		font-size: 20px;
+	}
+	.wgs__card__item__title {
+		padding: 0 25px;
+	}
+}
+
+@media (max-width: 768px) {
+	.wgs__card__item {
+		margin-top: 0;
+	}
+	.wgs__card__item__title {
+		margin-top: 10px;
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+@media (max-width: 425px) {
+	.wgs__card {
+		margin-bottom: 20px;
+	}
+	.wgs__card__item__progress-first {
+		margin-top: 0;
+	}
+	.wgs__card__item__title {
+		margin-top: 0px;
+	}
 }
 
 
